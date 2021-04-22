@@ -1,5 +1,5 @@
 <script>
-	import { _ } from '../../localization/translate';
+	import { _ } from '../../localization/translate.js';
 </script>
 
 <svelte:head>

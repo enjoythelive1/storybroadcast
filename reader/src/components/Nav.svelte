@@ -53,7 +53,7 @@
 
 <nav>
 	<h1>
-		<a href=".">
+		<a href={_url('')}>
 			Story Broadcast
 			<img src={logo} alt="logo" />
 		</a>
