@@ -1,6 +1,6 @@
 <script lang="ts">
 	import logo from 'images/logo.svg'
-	export let segment: string;
+	import { _, _url } from "../localization/translate.js";
 </script>
 
 <style>
@@ -28,21 +28,6 @@
 	li {
 		display: block;
 		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
 	}
 
 	a {
@@ -74,7 +59,7 @@
 		</a>
 	</h1>
 	<ul>
-		<li><a aria-current={segment === undefined ? 'page' : undefined} href=".">home</a></li>
-		<li><a aria-current={segment === 'about' ? 'page' : undefined} href="./about">about</a></li>
+		<li><a href={_url('')}>{_('home')}</a></li>
+		<li><a href={_url('about')}>{_('about')}</a></li>
 	</ul>
 </nav>

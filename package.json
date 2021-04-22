@@ -10,6 +10,8 @@
     "validate": "svelte-check --ignore src/node_modules/@sapper"
   },
   "dependencies": {
+    "@types/accept-language-parser": "^1.5.1",
+    "accept-language-parser": "^1.5.0",
     "compression": "^1.7.1",
     "express": "^4.17.1",
     "sirv": "^1.0.0"

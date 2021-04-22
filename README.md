@@ -52,7 +52,7 @@ There are three simple rules for naming the files that define your routes:
 
 Images added to `src/node_modules/images` can be imported into your code using `import 'images/<filename>'`. They will be given a dynamically generated filename containing a hash, allowing for efficient caching and serving the images on a CDN.
 
-See [`index.svelte`](src/routes/index.svelte) for an example.
+See [`index.svelte`](src/routes/[lang]/index.svelte) for an example.
 
 
 #### src/node_modules/@sapper
