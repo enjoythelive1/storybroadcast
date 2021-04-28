@@ -1,0 +1,35 @@
+services:
+  reader:
+    image: storybroadcast/reader
+    build:
+      context: ./reader
+      target: dev
+    volumes:
+      - ./reader:/app
+    environment:
+      PORT: 3000
+    ports:
+      - 3000:3000
+      - 10000:10000
+
+  writer:
+    image: storybroadcast/writer
+    build:
+      context: ./writter
+      target: dev
+    volumes:
+      - ./writter:/app
+    environment:
+      PORT: 3001
+    ports:
+      - 3001:3001
+      - 10001:10001
+
+  db:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    environment:
+      MONGO_DATA_DIR: /data/db
+    ports:
+      - 27001-27003:27001-27003
